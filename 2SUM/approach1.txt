@@ -1,0 +1,37 @@
+Approach1 
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        
+        int x=0;
+        int y=0;
+       
+        int[] arr=new int[2];
+        for(int i=0;i<nums.length;i++)
+        {
+            x=nums[i];
+            y=target-x;
+            for(int j=0;j<nums.length;j++)
+            {
+                if(i==j) continue;
+                else{
+                    if(y==nums[j])  {
+                        x=i;
+                    y=j;
+                   
+                         arr[0]=x;
+                       arr[1]=y;
+                      return arr;
+                    
+                    
+                    
+                    }
+                    
+                }
+            }
+        }
+        arr[0]=0;
+        arr[1]=0;
+       return arr;
+        
+    }
+}
