@@ -25,7 +25,7 @@ public class Shapes {
     //end of constructor
     //methods
     public static void display(){
-        System.out.println("hello mridula how are you");
+        System.out.println("hello how are you");
     }
 
     //Encapsulation methods
@@ -42,6 +42,7 @@ public class Shapes {
     String str=String.format("the value of a is %s and value of b is %s", this.a,this.b);
         return str;
     }
+    
 
 
 
