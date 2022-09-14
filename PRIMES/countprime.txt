@@ -1,0 +1,39 @@
+//naive approach
+class Solution {
+    public static boolean isPrime(int value){
+        int mid=value/2;
+        boolean res=true;
+        for(int i=2;i<=mid;i++)
+        {
+            if(value%i==0){
+                res=false;
+                break;
+            }
+        }
+        return res;
+        
+    }
+    public int countPrimes(int n) {
+        int count=0;
+        if(n==1 || n==0){
+            return count;
+        }
+        else if(n==2){
+            return 0;
+            
+        }
+        else{
+        for(int value=2;value<n;value++){
+        boolean result = isPrime(value);
+            System.out.println("vls"+value+result);
+            if(result==true){
+                count=count+1;
+            }
+         
+        }
+        }
+        System.out.println(count);
+        return count;
+        
+    }
+}

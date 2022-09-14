@@ -56,7 +56,7 @@ public class Part2 {
             
         }
         if(high>low){
-           System.out.println("false")
+           System.out.println("false");
            
         }
     
