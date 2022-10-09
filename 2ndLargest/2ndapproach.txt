@@ -1,0 +1,52 @@
+class Solution {
+    int print2largest(int arr[], int n) {
+        // code here
+        //finding largest in the array
+        int i=1;
+        int secondlargest=-1;
+       
+        int largest=arr[0];
+        while(i<=n-1)
+        {
+            if(largest<arr[i]){
+                largest=arr[i];
+            }
+            i++;
+            
+        }
+        //System.out.println(largest);
+      
+        
+        //Decide what to assign to aecondlargest variable
+        // it shoould not be largest obviously 
+        // any element from an array but not largest
+        
+        for(i=0;i<n;i++)
+        {
+            if(arr[i]!=largest){
+           secondlargest=arr[i];
+            break;
+            }
+        }
+        //when all the elements in the array are same and we do not have choice for second largest element 
+        if(secondlargest==-1){
+            return -1;
+            
+        }
+        i=0;
+        while(i<=n-1)
+        {
+            if(arr[i]==largest){
+                i++;
+                continue;
+                
+            }
+            if(arr[i]>secondlargest){
+                secondlargest=arr[i];
+            }
+            i++;
+        }
+        return secondlargest;
+   
+    }
+}

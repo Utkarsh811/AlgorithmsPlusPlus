@@ -3,6 +3,25 @@ package PRIMES;
 import java.util.*;
 
 public class countprimes {
+   
+    public static void main(String[] args){
+        int a=5;
+        int b=10;
+        
+
+    }
+}
+    
+
+    
+
+
+
+
+/*package PRIMES;
+import java.util.*;
+
+public class countprimes {
     public static void Countprime(int number)
     {
         int[] arrprime=new int[number];
@@ -39,3 +58,4 @@ public class countprimes {
 
     
 }
+ */
