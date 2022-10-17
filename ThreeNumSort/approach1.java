@@ -1,5 +1,6 @@
 package ThreeNumSort;
 /*Sort the 0,1,2 */
+//Approach using counting sort
 import java.util.*;
 
 public class approach1 {
