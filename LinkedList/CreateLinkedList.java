@@ -2,8 +2,8 @@ package LinkedList;
 
 public class CreateLinkedList {
 
-  static Nodeclass Head;
- static Nodeclass pointer;
+  public static Nodeclass Head;
+static Nodeclass pointer;
   static int size;
 
   //Constructor
@@ -11,6 +11,7 @@ public class CreateLinkedList {
       size=0;
       Head=null;
       pointer=null;
+  
       
     
   }

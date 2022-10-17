@@ -1,0 +1,12 @@
+package PRIMES;
+import java.util.*;
+class whileloop{
+    public static void main(String[] args)
+    {
+        int T=6;
+        while(T--)
+        {
+            System.out.println(T);
+        }
+    }
+}

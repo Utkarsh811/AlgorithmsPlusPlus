@@ -6,15 +6,43 @@ public class maain extends CreateLinkedList {
         //TODO Auto-generated constructor stub
     }
 
+   
+   
+
+
     public static void Task1(CreateLinkedList link3)
     {
         Nodeclass pointer1;
+        Nodeclass pointer2;
         pointer1=link3.Head;
+        pointer2=null;
+        int count=0;
+  
         
-        while(pointer1!=null)
+        while(pointer1.next!=null)
         {
-            System.out.println(pointer1.data);
+            
+
+          
+            if(pointer1.data<pointer1.next.data){
+                 //delete head
+                if(count==0){
+                    link3.Head=link3.Head.next;
+
+                }
+                   //delete from mid
+                else{
+                pointer2.next=pointer1.next;
+                }
+
+
+            }
+
+            
+          
+            pointer2=pointer1;
             pointer1=pointer1.next;
+            count++;
         }
 
     }
@@ -35,12 +63,14 @@ public class maain extends CreateLinkedList {
         System.out.println(TellSize());
 
         CreateLinkedList link3=new CreateLinkedList();
-        CreateList(new int[]{9,2,32,53,22,42,19,76});
-        ViewLinkedList();
+        CreateList(new int[]{5,6,7,9,6,2,7});
+    
         System.out.println(TellSize());
+        ViewLinkedList();
 
 
         Task1(link3);
+        ViewLinkedList();
 
 
 
