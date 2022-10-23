@@ -2,20 +2,24 @@ package PatternProgramming;
 import java.util.*;
 
 public class PascalTriangle {
+    /*Although this method could not handle higher values as datatypw fails to store the values 
+     * Watch part2 to  understand the better solution and approach
+     */
 
     public static int factorialresult(int n,int r,int diff)
     {
         //System.out.println(n+","+r+","+diff);
-        int[] arr=new int[]{n,r,diff};
+        long[] arr=new long[]{n,r,diff};
         for(int i=0;i<arr.length;i++)
         {
-            int result=1;
-            if(arr[i]==0 || arr[i]==1)
+            long result=1;
+            long val=arr[i];
+            if(val==0 || val==1)
             {
                 result=1;
             }
             else{
-            for(int j=arr[i];j>=1;j--)
+            for(long j=1;j<=val;j++)
             {
                 result=result*j;
 
@@ -23,14 +27,13 @@ public class PascalTriangle {
         
             arr[i]=result;
         }
-        
-        
+      
         
 
 
 
        
-        return arr[0]/(arr[1]*arr[2]);
+        return (int)(arr[0]/(arr[1]*arr[2]));
 
     }
     public static void Pascal(int rows)
@@ -48,7 +51,7 @@ public class PascalTriangle {
 
                 int r=col1;
                 int diff=n-r;
-                // if(i==rows-1)
+                // if(i==rows-2)
                 // {
                 //     System.out.println(n+","+r+","+diff);
                 // }
