@@ -1,0 +1,67 @@
+Given an array A of size N, the task is to check if the given array represents a Binary Max Heap.
+
+
+Example 1:
+
+Input:  arr[] = {90, 15, 10, 7, 12, 2}
+Output: True
+The given array represents below tree
+       90
+     /    \
+   15      10
+  /  \     /
+7    12  2
+The tree follows max-heap property as every
+node is greater than all of its descendants.
+
+index start from 0
+Node at root i
+Left node at  2*i+1
+Right node at 2*i+2
+
+
+
+
+
+
+
+
+class Solution {
+    
+    public boolean countSub(long arr[], long n)
+    {
+       int pointer=0;
+       int left=2*pointer+1;
+       int right=2*pointer+2;
+       boolean flag=true;
+       while(left<n || right<n)
+       {
+           //System.out.println("pointer="+arr[pointer]);
+           if(left<=n-1 && right>n-1 && arr[pointer]>arr[left])
+           {
+               
+               
+               pointer++;
+               left=2*pointer+1;
+               right=2*pointer+2;
+               continue;
+           }
+             else if(arr[pointer]>arr[left] && arr[pointer]>arr[right])
+           {
+                  
+               pointer++;
+               left=2*pointer+1;
+               right=2*pointer+2;
+               continue;
+           }
+           else
+           {
+              
+               flag=false;
+               break;
+           }
+       }
+       return flag;
+        
+    }
+}

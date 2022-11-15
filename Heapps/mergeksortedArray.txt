@@ -1,0 +1,43 @@
+Given K sorted arrays arranged in the form of a matrix of size K*K. The task is to merge them into one sorted array.
+Example 1:
+
+Input:
+K = 3
+arr[][] = {{1,2,3},{4,5,6},{7,8,9}}
+Output: 1 2 3 4 5 6 7 8 9
+Explanation:Above test case has 3 sorted
+arrays of size 3, 3, 3
+arr[][] = [[1, 2, 3],[4, 5, 6], 
+[7, 8, 9]]
+The merged list will be 
+[1, 2, 3, 4, 5, 6, 7, 8, 9].
+
+<CODE/>
+class Solution
+{
+    //Function to merge k sorted arrays.
+    public static ArrayList<Integer> mergeKArrays(int[][] arr,int K) 
+    {
+        // Write your code here.
+        int rows=arr.length;
+        int cols=arr[0].length;
+        PriorityQueue<Integer>pq=new PriorityQueue<>();
+        for(int i=0;i<arr.length;i++)
+        {
+            for(int j=0;j<arr[i].length;j++)
+            {
+                pq.add(arr[i][j]);
+                
+            }
+        }
+        //System.out.println(pq);
+        ArrayList<Integer> arn=new ArrayList<>();
+        for(int k=0;k<rows*cols;k++)
+        {
+            arn.add((int)pq.poll());
+            
+        }
+        return arn;
+        
+    }
+}
