@@ -1,2 +1,3 @@
 **How to sort the HashMap by descending and ascending order by values
  LinkedHashMap<Integer, Integer> sorted = mp.entrySet().stream().sorted(comparingByValue()).collect( toMap(e -> e.getKey(), e -> e.getValue(), (e1, e2) -> e2, LinkedHashMap::new));
+ strings comparing is important here == and .equal are not same Go through "https://www.javatpoint.com/string-comparison-in-java"
