@@ -1,0 +1,17 @@
+update coding_bg
+set language='c++' where lang_id='s18';
+select * from coding_bg;
+
+//creating table
+ create table employee_db(EMPLOYEE_ID int not null primary key,FIRST_NAME varchar(20),LAST_NAME varchar(20),EMAIL varchar(20), PHONE_NUMBER real, HIRE_DATE date,JOB_ID varchar(20),SALARY int,COMMISION_PCT varchar(20),MANAGER_ID int,DEPARTMENT_ID int);
+
+
+ // connecting data base
+
+
+ \c database LAST_NAME
+
+ 
+ // viewing table
+ \d tablename
+

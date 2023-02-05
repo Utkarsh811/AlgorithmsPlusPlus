@@ -1,0 +1,55 @@
+1309. Decrypt String from Alphabet to Integer Mapping
+
+
+class Solution {
+     public String reverse(String str)
+        {
+            String news="";
+            for(int k=str.length()-1;k>=0;k--)
+            {
+                news=news+str.charAt(k);
+
+
+            }
+            return news;
+        }
+    public String freqAlphabets(String s) {
+       
+        String output="";
+        int i;
+        int j;
+        for(i=s.length()-1;i>=0;i--){
+            //output=output+s.charAt(i);
+            if(s.charAt(i)=='#')
+            {
+                String newval="";
+                //StringBuilder newval=new StringBuilder(""); 
+                for(j=i-1;j>=i-2;j--)
+                {
+                    newval=newval+s.charAt(j);
+
+                }
+                //System.out.println(newval);
+               // System.out.println((char)( Integer.valueOf(reverse(newval))+96));
+              
+                output=output+(char)( Integer.valueOf(reverse(newval))+96);
+
+                i=j+1;
+                
+
+            }
+            else{
+                //System.out.println();
+                //System.out.println((char)( + 96));
+            output=output+(char)(Integer.valueOf(String.valueOf(s.charAt(i)))+96);
+            }
+
+        }
+        return reverse(output);
+        
+        
+    }
+}
+
+//LEARNINGS
+never convert character to int if character is number first convert it into string then into int likein 44 line number
